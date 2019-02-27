@@ -22,5 +22,5 @@ DenseASPP  |  CVPR2018  | DenseNet-161  |  80.6
 OCNet| - |  ResNet-101 | 81.7
 GALD-net | - | ResNet50 |**80.8**
 GALD-net | -| ResNet101 |**81.8**
-GALD-net(use coarse) |- | ResNet101 |**82.28**
+GALD-net(use coarse) |- | ResNet101 |**82.8**
 GALD-net(use map)|- |ResNet101| **83.1**
