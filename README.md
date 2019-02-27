@@ -5,7 +5,7 @@ GALD net achieve top performace on Cityscape data, Source code and models will b
 
 
 
-## state of the art models on cityscape data set 
+## state of the art models on Cityscapes dataset 
 
 Method | Conference | Backbone | mIoU(\%) 
 ---- | --- | --- | --- 
