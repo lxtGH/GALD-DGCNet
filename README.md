@@ -1,7 +1,7 @@
 # GALD_net
 Source  code and models of GALD net
 
-GALD net achieve top performace on Cityscape data, Source code and models will be avalibale soon.
+GALD net achieve top performace on Cityscape dataset, Source code and model will be avalibale soon.
 
 
 
@@ -20,6 +20,7 @@ DFN  |  CVPR2018  | ResNet-101  |  79.3
 DSSPN | CVPR2018  | ResNet-101  | 77.8 
 DenseASPP  |  CVPR2018  | DenseNet-161  |  80.6
 OCNet| - |  ResNet-101 | 81.7
+CCNet| - | ResNet-101 | 81.4
 GALD-net | - | ResNet50 |**80.8**
 GALD-net | -| ResNet101 |**81.8**
 GALD-net(use coarse) |- | ResNet101 |**82.8**
