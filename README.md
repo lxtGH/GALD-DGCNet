@@ -23,5 +23,5 @@ OCNet| - |  ResNet-101 | 81.7
 CCNet| - | ResNet-101 | 81.4
 GALD-net | - | ResNet50 |**80.8**
 GALD-net | -| ResNet101 |**81.8**
-GALD-net(use coarse) |- | ResNet101 |**82.8**
-GALD-net(use map)|- |ResNet101| **83.1**
+GALD-net(use coarse) |- | ResNet101 |**82.9**
+GALD-net(use map)|- |ResNet101| **83.3**
