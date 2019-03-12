@@ -1,5 +1,5 @@
 # GALD_net
-We propose Global Aggregation then Local Distribution (GALD) scheme to distribute global information to each position adaptively according the local information surrounding the position. GALD net achieves **top performace** on Cityscapes dataset. Both source code and models will be avalibale soon.
+We propose Global Aggregation then Local Distribution (GALD) scheme to distribute global information to each position adaptively according the local information surrounding the position. GALD net achieves **top performace** on Cityscapes dataset. Both source code and models will be available soon.
 
 
 ## Comparstate of the art models on Cityscapes dataset 
