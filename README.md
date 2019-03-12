@@ -21,3 +21,5 @@ GALD-net | - | ResNet50 |**80.8**
 GALD-net | -| ResNet101 |**81.8**
 GALD-net(use coarse) |- | ResNet101 |**82.9**
 GALD-net(use map)|- |ResNet101| **83.3**
+
+Detailed Results are shown [here](https://www.cityscapes-dataset.com/anonymous-results/?id=5ee0f5098e160aa56db6e9ed01c5fbc73d4ac736b6b61751b50ad31067b0d5bd)
