@@ -1,12 +1,8 @@
 # GALD_net
-Source  code and models of GALD net
-
-GALD net achieve top performace on Cityscape dataset, Source code and model will be avalibale soon.
+We propose Global Aggregation then Local Distribution (GALD) scheme to distribute global information to each position adaptively according the local information surrounding the position. GALD net achieves **top performace** on Cityscapes dataset. Both source code and models will be avalibale soon.
 
 
-
-## state of the art models on Cityscapes dataset 
-
+## Comparstate of the art models on Cityscapes dataset 
 Method | Conference | Backbone | mIoU(\%) 
 ---- | --- | --- | --- 
 RefineNet |  CVPR2017  | ResNet-101  |  73.6 
