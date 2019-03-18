@@ -1,5 +1,5 @@
 # GALD-Net
-We propose Global Aggregation then Local Distribution (GALD) scheme to distribute global information to each position adaptively according to the local information surrounding the position. GALD net achieves **top performance** on Cityscapes dataset. Both source code and models will be available soon.
+We propose Global Aggregation then Local Distribution (GALD) scheme to distribute global information to each position adaptively according to the local information around the position. GALD net achieves **top performance** on Cityscapes dataset. Both source code and models will be available soon.
 
 
 ##  Comparisons with state-of-the-art models on Cityscapes dataset 
@@ -17,9 +17,9 @@ DSSPN | CVPR2018  | ResNet-101  | 77.8
 DenseASPP  |  CVPR2018  | DenseNet-161  |  80.6
 OCNet| - |  ResNet-101 | 81.7
 CCNet| - | ResNet-101 | 81.4
-GALD-net | - | ResNet50 |**80.8**
-GALD-net | -| ResNet101 |**81.8**
-GALD-net(use coarse) |- | ResNet101 |**82.9**
-GALD-net(use map)|- |ResNet101| **83.3**
+GALD-Net | - | ResNet50 |**80.8**
+GALD-Net | -| ResNet101 |**81.8**
+GALD-Net(use coarse data) |- | ResNet101 |**82.9**
+GALD-Net(use Mapillary)|- |ResNet101| **83.3**
 
 Detailed Results are shown [here](https://www.cityscapes-dataset.com/anonymous-results/?id=5ee0f5098e160aa56db6e9ed01c5fbc73d4ac736b6b61751b50ad31067b0d5bd)
