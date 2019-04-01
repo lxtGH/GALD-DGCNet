@@ -1,3 +1,8 @@
+# City-seg 
+
+We will all release the all the state-of-the-art models and code trained on Cityscape dataset including Deeplabv3, Deeplabv3+, PSPnet, DAnet. All the codes are still in refactoring process.
+
+
 # GALD-Net
 We propose Global Aggregation then Local Distribution (GALD) scheme to distribute global information to each position adaptively according to the local information around the position. GALD net achieves **top performance** on Cityscapes dataset. Both source code and models will be available soon.
 
