@@ -1,6 +1,6 @@
 # City-seg 
 
-We will all release the all the state-of-the-art models and code trained on Cityscape dataset including Deeplabv3, Deeplabv3+, PSPnet, DAnet. All the codes are still in refactoring process.
+We will also release the all the state-of-the-art models and code trained on Cityscape dataset including Deeplabv3, Deeplabv3+, PSPnet, DAnet. All the codes are still in refactoring process.
 
 
 # GALD-Net
