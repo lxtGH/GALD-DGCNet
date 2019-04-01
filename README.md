@@ -4,7 +4,7 @@ We will also release the all the state-of-the-art models and code trained on Cit
 
 
 # GALD-Net
-We propose Global Aggregation then Local Distribution (GALD) scheme to distribute global information to each position adaptively according to the local information around the position. GALD net achieves **top performance** on Cityscapes dataset. Both source code and models will be available soon.
+We propose Global Aggregation then Local Distribution (GALD) scheme to distribute global information to each position adaptively according to the local information around the position. GALD net achieves **top performance** on Cityscapes dataset. Both source code and models will be available soon. The work was done at [DeepMotion AI Research](https://deepmotion.ai/) 
 
 
 ##  Comparisons with state-of-the-art models on Cityscapes dataset 
