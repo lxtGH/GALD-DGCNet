@@ -34,7 +34,6 @@ GALD-Net(use Mapillary)|BMVC2019 |ResNet101| **83.3**
 ## Detailed Results are shown 
 GALD-Net:
 [here](https://www.cityscapes-dataset.com/anonymous-results/?id=5ee0f5098e160aa56db6e9ed01c5fbc73d4ac736b6b61751b50ad31067b0d5bd)   
-
 GFF-Net:[here](https://www.cityscapes-dataset.com/method-details/?submissionID=3719)  
 Both are (**Single Model Result**)  
 
