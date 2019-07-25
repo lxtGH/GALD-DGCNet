@@ -61,7 +61,6 @@ year={2019}
   booktitle = {arXiv preprint arXiv:1903.11816},
   year = {2019}
 }
-
 ```
 
 ```
