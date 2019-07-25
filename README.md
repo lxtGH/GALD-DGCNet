@@ -42,7 +42,7 @@ Both are (**Single Model Result**)
 
 
 # Citation 
-Please watch our paper for model details 
+Please read our paper for model details 
 
 
 ```
