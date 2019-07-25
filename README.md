@@ -28,6 +28,7 @@ CCNet| ICCV2019 | ResNet-101 | 81.4
 GALD-Net | BMVC2019 | ResNet50 |**80.8**
 GALD-Net | BMVC2019| ResNet101 |**81.8**
 GFF-Net | - | ResNet101 | **82.3**
+Dual-GCN-Net | BMVC2019 | ResNet101 | **82.0**
 GALD-Net(use coarse data) |BMVC2019 | ResNet101 |**82.9**
 GALD-Net(use Mapillary)|BMVC2019 |ResNet101| **83.3**
 
