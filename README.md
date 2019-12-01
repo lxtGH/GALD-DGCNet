@@ -1,6 +1,6 @@
 # High Performance Cityscape Semantic Segmentaion
 
-I will release the all the state-of-the-art models and code trained on Cityscape dataset including Deeplabv3, Deeplabv3+, PSPnet, DAnet, GloreNet.
+I will release the all the state-of-the-art models and code trained on Cityscape dataset including Deeplabv3, Deeplabv3+, PSPnet, DAnet, GloreNet, EMANet in this week.
 
 There is also co-current repo for fast semantic segmentation:[Fast_Seg](https://github.com/lxtGH/Fast_Seg)
 
