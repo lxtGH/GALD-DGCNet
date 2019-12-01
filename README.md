@@ -1,7 +1,8 @@
 # High Performance Cityscape Semantic Segmentaion
 
-We will also release the all the state-of-the-art models and code trained on Cityscape dataset including Deeplabv3, Deeplabv3+, PSPnet, DAnet. 
+I will release the all the state-of-the-art models and code trained on Cityscape dataset including Deeplabv3, Deeplabv3+, PSPnet, DAnet, GloreNet.
 
+There is also co-current repo for fast semantic segmentation:[Fast_Seg](https://github.com/lxtGH/Fast_Seg)
 
 # GALD-Net (BMVC 2019)
 We propose Global Aggregation then Local Distribution (GALD) scheme to distribute global information to each position adaptively according to the local information around the position. GALD net achieves **top performance** on Cityscapes dataset. Both source code and models will be available soon. The work was done at [DeepMotion AI Research](https://deepmotion.ai/) 
@@ -29,7 +30,7 @@ OCNet| - |  ResNet-101 | 81.7
 CCNet| ICCV2019 | ResNet-101 | 81.4
 GALD-Net | BMVC2019 | ResNet50 |**80.8**
 GALD-Net | BMVC2019| ResNet101 |**81.8**
-GFF-Net | - | ResNet101 | **82.3**
+GFF-Net | AAAI2020 | ResNet101 | **82.3**
 DGCN-Net | BMVC2019 | ResNet101 | **82.0**
 GALD-Net(use coarse data) |BMVC2019 | ResNet101 |**82.9**
 GALD-Net(use Mapillary)|BMVC2019 |ResNet101| **83.3**
@@ -74,3 +75,6 @@ year={2019}
 
 # License
 MIT License
+
+
+
