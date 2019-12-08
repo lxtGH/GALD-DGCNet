@@ -1,6 +1,6 @@
 # High Performance Road Scene Semantic Segmentaion :tada:
 
-I will release the all the state-of-the-art models and code trained on Cityscape dataset including Deeplabv3, Deeplabv3+, PSPnet, DAnet, GloreNet, EMANet in this week.
+I will release the all the state-of-the-art models and code trained on Cityscape dataset including Deeplabv3, Deeplabv3+, PSPnet, DAnet, GloreNet, EMANet. 
 
 There is also co-current repo for Fast Road Scene Semantic Segmentation:[Fast_Seg](https://github.com/lxtGH/Fast_Seg)
 
