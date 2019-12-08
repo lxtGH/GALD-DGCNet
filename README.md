@@ -1,8 +1,8 @@
 # High Performance Road Scene Semantic Segmentaion :tada:
 
-I will release the all the state-of-the-art models and code trained on Cityscape dataset including Deeplabv3, Deeplabv3+, PSPnet, DAnet, GloreNet, EMANet in this week.
+I will release the all the state-of-the-art models and code trained on Cityscape dataset including Deeplabv3, Deeplabv3+, PSPnet, DAnet, GloreNet, EMANet. 
 
-There is also co-current repo for Fast Road Scene Semantic Segmentation:[Fast_Seg](https://github.com/lxtGH/Fast_Seg)
+There is also a co-current repo for Fast Road Scene Semantic Segmentation:[Fast_Seg :zap: ](https://github.com/lxtGH/Fast_Seg) and thanks for your attention :smiley:
 
 # Some Advices on Training
 Please see the Common.md for the details.
@@ -20,13 +20,13 @@ Please see the demo.py for the details.
 
 
 
-# GALD-Net (BMVC 2019,[arxiv](https://arxiv.org/pdf/1909.07229.pdf))
+## GALD-Net (BMVC 2019,[arxiv](https://arxiv.org/pdf/1909.07229.pdf))
 We propose Global Aggregation then Local Distribution (GALD) scheme to distribute global information to each position adaptively according to the local information around the position. GALD net achieves **top performance** on Cityscapes dataset. Both source code and models will be available soon. The work was done at [DeepMotion AI Research](https://deepmotion.ai/) 
 
-# GFF-Net (AAAI 2020,[arxiv](https://arxiv.org/abs/1904.01803))
+## GFF-Net (AAAI 2020,[arxiv](https://arxiv.org/abs/1904.01803))
 We proposed Gated Fully Fusion (GFF) to fuse features from multiple levels through gates in a fully connected way. Specifically, features at each level are enhanced by higher-level features with stronger semantics and lower-level features with more details, and gates are used to control the pass of useful information which significantly reducing noise propagation during fusion. (Joint work: Key Laboratory of Machine Perception, School of EECS @Peking University and DeepMotion AI Research )
 
-# DGCNet (BMVC 2019,[arxiv](https://arxiv.org/abs/1909.06121)) 
+## DGCNet (BMVC 2019,[arxiv](https://arxiv.org/abs/1909.06121)) 
 We propose Dual Graph Convolutional Network (DGCNet) models the global context of the input feature by modelling two orthogonal graphs in a single framework. (Joint work: University of Oxford, Peking University and DeepMotion AI Research)
 
 ##  Comparisons with state-of-the-art models on Cityscapes dataset 
