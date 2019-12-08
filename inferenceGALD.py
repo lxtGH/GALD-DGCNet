@@ -65,13 +65,13 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='PyTorch \
                     Segmentation Crop Prediction')
     parser.add_argument('--input_dir', type=str,
-                        default="/home/lxt/Documents/CVPR2020/SqueezeReasoning_Analysis/imgs",
+                        default="/home/lxt/imgs",
                         help='training dataset folder (default: \
                                   $(HOME)/data)')
-    parser.add_argument('--output_dir', type=str, default="/home/lxt/Documents/CVPR2020/GALD_83_outputs",
+    parser.add_argument('--output_dir', type=str, default="/home/lxt/Documents/outputs/",
                         help='output directory of the model, for saving the seg_models')
     parser.add_argument("--resume", type=str,
-                        default="/home/lxt/pretrained/GALD_res101_coarse_map_831.pth")
+                        default="/home/lxt/pretrained/GALD_res101_map_831.pth")
 
     args = parser.parse_args()
     inference(args)

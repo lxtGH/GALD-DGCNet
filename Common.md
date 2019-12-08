@@ -1,4 +1,4 @@
-## Some Advices on Training
+## Some Advices on Training and Testing 
 1. The output stride is 8 or 16 for keeping detailed information which lead to huge memory cost.
 
 2. Non-local like networks usually use stride 8 for better performance.
@@ -10,4 +10,8 @@ Finally, re-finetune on the fine dataset.
 
 5. For Mapillary dataset for the pretraining, it can boost preformance on CityScape or one can also use Maipillary as using the coarse data.
 
-6. 
+6. For testing, use the multi-scale cropping test with flip for the final test server submission.
+
+
+# Notice
+This code base is not well orginized and its amis is to quick experiment and debug.
