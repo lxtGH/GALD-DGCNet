@@ -11,7 +11,6 @@ import torch.nn.functional as F
 from torch.nn import BatchNorm2d
 
 
-
 class SpatialCGNL(nn.Module):
     """Spatial CGNL block with dot production kernel for image classfication.
     """
@@ -125,7 +124,7 @@ class LocalAttenModule(nn.Module):
     def __init__(self, inplane):
         super(LocalAttenModule, self).__init__()
         self.dconv1 = nn.Sequential(
-            nn.Conv2d(inplane, inplane,kernel_size=3, groups=inplane, stride=2),
+            nn.Conv2d(inplane, inplane, kernel_size=3, groups=inplane, stride=2),
             BatchNorm2d(inplane),
             nn.ReLU(inplace=False)
         )
@@ -265,7 +264,7 @@ class GALDNet(nn.Module):
             downsample = nn.Sequential(
                 nn.Conv2d(self.inplanes, planes * block.expansion,
                           kernel_size=1, stride=stride, bias=False),
-                BatchNorm2d(planes * block.expansion,affine = affine_par))
+                BatchNorm2d(planes * block.expansion, affine=True))
 
         layers = []
         generate_multi_grid = lambda index, grids: grids[index%len(grids)] if isinstance(grids, tuple) else 1

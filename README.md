@@ -1,22 +1,35 @@
 # High Performance Road Scene Semantic Segmentaion :tada:
 
-I will release the all the state-of-the-art models and code trained on Cityscape dataset including Deeplabv3, Deeplabv3+, PSPnet, DAnet, GloreNet, EMANet as soon as possible.
+I will release the all the state-of-the-art models and code trained on Cityscape dataset including Deeplabv3+, PSPnet, DAnet, GloreNet, EMANet as soon as possible.
 
 There is also a co-current repo for Fast Road Scene Semantic Segmentation:[Fast_Seg :zap: ](https://github.com/lxtGH/Fast_Seg) and thanks for your attention :smiley:
 
-# Some Advices on Training
-Please see the Common.md for the details.
 
-# Training & validation
+
+# Training & Validation
+## Training 
+Note that we use apex to speed up training process. 
+At least 8 gpus with 12GB are needed since we need batch size at least 8 and crop size at least 800 on Cityscapes dataset.
 Please see the train_distribute.py for the details. 
 
+## Validation
+
 # Test & Demo
-Please see the demo.py for the details.
+
+## Demo File 
+Please see the inference.py for the details.
+
+## Test File
+
 
 # Trained Model
+model with fine dataset.  
+
+model with coarse dataset pretrained.  
 
 
-
+# Some Advices on Training
+Please see the Common.md for the details.
 
 
 
@@ -60,7 +73,8 @@ Both are (**Single Model Result**)
 
 
 # Citation 
-Please read our paper for model details. If you find the codebase usefull, please consider cite our paper.
+Please read our paper for model details. 
+If you find the codebase usefull, please consider cite our paper.
 ```
 @inproceedings{xiangtl_gald
 title={Global Aggregation then Local Distribution in Fully Convolutional Networks},
