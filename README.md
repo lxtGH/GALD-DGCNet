@@ -41,16 +41,14 @@ sh ./exp/tes_dualseg_r50_city_finetrain.sh
 ```
 
 # Trained Model
-model with fine dataset.  
-Dual-Seg-net: 
-    resnet-50:
-    resnet-101:
-model with coarse dataset pretrained.  
+model with fine dataset. 
+
+Dual-Seg-net: r50/r101 link: (https://drive.google.com/file/d/13HnKtJLyCVK7-e0OtQeLrsJub4IO2t0R/view?usp=sharing, https://drive.google.com/file/d/1xgePAXsXGummOfTo3XFPKUoe5-1QZcIy/view?usp=sharing)
 
 
 # Some Advices on Training
-Please see the Common.md for the details.
-
+Please see the Common.md for the details for using the coarse data training. 
+Or you can refer to our GLAD paper(last part) for reference.
 
 
 ## GALD-Net (BMVC 2019,[arxiv](https://arxiv.org/pdf/1909.07229.pdf))
