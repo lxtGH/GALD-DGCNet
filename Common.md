@@ -14,4 +14,4 @@ Finally, re-finetune on the fine dataset.
 
 
 # Notice
-This code base is not well orginized and its amis is to quick experiment and debug.
+This code base is well orginized and its amis is to quick experiment and debug.

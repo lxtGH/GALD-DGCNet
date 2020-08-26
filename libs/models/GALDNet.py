@@ -203,7 +203,7 @@ class Bottleneck(nn.Module):
 
 
 class GALDHead(nn.Module):
-    def __init__(self, inplanes, interplanes, outplanes, num_classes):
+    def __init__(self, inplanes, interplanes, num_classes):
         super(GALDHead, self).__init__()
         self.conva = nn.Sequential(nn.Conv2d(inplanes, interplanes, 3, padding=1, bias=False),
                                    BatchNorm2d(interplanes),
@@ -214,7 +214,7 @@ class GALDHead(nn.Module):
                                    nn.ReLU(interplanes))
 
         self.bottleneck = nn.Sequential(
-            nn.Conv2d(inplanes + interplanes, outplanes, kernel_size=3, padding=1, dilation=1, bias=False),
+            nn.Conv2d(inplanes + interplanes, interplanes, kernel_size=3, padding=1, dilation=1, bias=False),
             BatchNorm2d(interplanes),
             nn.ReLU(interplanes),
             nn.Conv2d(512, num_classes, kernel_size=1, stride=1, padding=0, bias=True)
@@ -249,7 +249,7 @@ class GALDNet(nn.Module):
         self.layer3 = self._make_layer(block, 256, layers[2], stride=1, dilation=2)
         self.layer4 = self._make_layer(block, 512, layers[3], stride=1, dilation=4, multi_grid=(1, 2, 4))
 
-        self.head = GALDHead(2048, 512, 512, num_classes=num_classes)
+        self.head = GALDHead(2048, 512, num_classes=num_classes)
         self.dsn = nn.Sequential(
             nn.Conv2d(1024, 512, kernel_size=3, stride=1, padding=1),
             BatchNorm2d(512),

@@ -36,3 +36,7 @@ dist/
 # project dirs
 /datasets
 /models
+
+
+# Mac
+.DS_Store

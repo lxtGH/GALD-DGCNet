@@ -1,30 +1,50 @@
-# High Performance Road Scene Semantic Segmentaion :tada:
-
-I will release the all the state-of-the-art models and code trained on Cityscape dataset including Deeplabv3+, PSPnet, DAnet, GloreNet, EMANet as soon as possible.
+# GALD-Net & Dual-Seg Net （BMVC-2019）
+This is pytorch re-implementation of GALD-net and Dual-Seg
+Both paper are accepted by BMVC-2019 which achieves state-of-the-art results on Cityscapes and Pascal Context datasets.
 
 There is also a co-current repo for Fast Road Scene Semantic Segmentation:[Fast_Seg :zap: ](https://github.com/lxtGH/Fast_Seg) and thanks for your attention :smiley:
 
+## GALDNet
+![avatar](./fig/gald.jpeg)
+
+## DualGCNSegNet
+![avatar](./fig/dual_seg.jpeg)
 
 
 # Training & Validation
+
+## Requirement
+
+pytorch >= 1.1.0
+apex
+opencv-python
+
 ## Training 
 Note that we use apex to speed up training process. 
 At least 8 gpus with 12GB are needed since we need batch size at least 8 and crop size at least 800 on Cityscapes dataset.
 Please see the train_distribute.py for the details. 
 
+```bash
+sh ./exp/train_dual_seg_r50_city_finetrain.sh
+```
+You will get the model with 79.8 mIoU.
+
+```bash
+sh ./exp/train_dual_seg_r101_city_finetrain.sh
+```
+You will get the model with 80.4 mIoU.
+
 ## Validation
 
-# Test & Demo
-
-## Demo File 
-Please see the inference.py for the details.
-
-## Test File
-
+```bash
+sh ./exp/tes_dualseg_r50_city_finetrain.sh
+```
 
 # Trained Model
 model with fine dataset.  
-
+Dual-Seg-net: 
+    resnet-50:
+    resnet-101:
 model with coarse dataset pretrained.  
 
 
@@ -36,11 +56,10 @@ Please see the Common.md for the details.
 ## GALD-Net (BMVC 2019,[arxiv](https://arxiv.org/pdf/1909.07229.pdf))
 We propose Global Aggregation then Local Distribution (GALD) scheme to distribute global information to each position adaptively according to the local information around the position. GALD net achieves **top performance** on Cityscapes dataset. Both source code and models will be available soon. The work was done at [DeepMotion AI Research](https://deepmotion.ai/) 
 
-## GFF-Net (AAAI 2020,[arxiv](https://arxiv.org/abs/1904.01803))
-We proposed Gated Fully Fusion (GFF) to fuse features from multiple levels through gates in a fully connected way. Specifically, features at each level are enhanced by higher-level features with stronger semantics and lower-level features with more details, and gates are used to control the pass of useful information which significantly reducing noise propagation during fusion. (Joint work: Key Laboratory of Machine Perception, School of EECS @Peking University and DeepMotion AI Research )
-
 ## DGCNet (BMVC 2019,[arxiv](https://arxiv.org/abs/1909.06121)) 
 We propose Dual Graph Convolutional Network (DGCNet) models the global context of the input feature by modelling two orthogonal graphs in a single framework. (Joint work: University of Oxford, Peking University and DeepMotion AI Research)
+
+
 
 ##  Comparisons with state-of-the-art models on Cityscapes dataset 
 Method | Conference | Backbone | mIoU(\%) 
@@ -59,7 +78,6 @@ OCNet| - |  ResNet-101 | 81.7
 CCNet| ICCV2019 | ResNet-101 | 81.4
 GALD-Net | BMVC2019 | ResNet50 |**80.8**
 GALD-Net | BMVC2019| ResNet101 |**81.8**
-GFF-Net | AAAI2020 | ResNet101 | **82.3**
 DGCN-Net | BMVC2019 | ResNet101 | **82.0**
 GALD-Net(use coarse data) |BMVC2019 | ResNet101 |**82.9**
 GALD-Net(use Mapillary)|BMVC2019 |ResNet101| **83.3**
@@ -82,14 +100,7 @@ author={Li, Xiangtai and Zhang, Li and You, Ansheng and Yang, Maoke and Yang, Ku
 booktitle={BMVC2019},
 }
 ```
-```
-@inproceedings{xiangtl_gff
-  title     = {GFF: Gated Fully Fusion for semantic segmentation},
-  author    = {Li, Xiangtai and  Zhao Houlong and Han Lei and Tong Yunhai and Yang Kuiyuan},
-  booktitle = {AAAI2020},
-  year = {2019}
-}
-```
+
 ```
 @inproceedings{zhangli_dgcn
 title={Dual Graph Convolutional Network for Semantic Segmentation},

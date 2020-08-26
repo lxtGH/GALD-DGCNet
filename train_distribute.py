@@ -52,13 +52,13 @@ def get_arguments():
                         help="Number of images sent to the network in one step.")
     parser.add_argument("--batch_size", type=int, default=8,
                         help="Number of images sent to the network in one step.")
-    parser.add_argument('--gpu_num',type=int, default=8)
+    parser.add_argument('--gpu_num', type=int, default=8)
     parser.add_argument("--data_dir", type=str, default="./data",
                         help="Path to the directory containing the Cityscapes dataset.")
     parser.add_argument("--data_list", type=str, default="./data/cityscapes/train.txt",
                         help="Path to the file listing the images in the dataset.")
     parser.add_argument("--data_set", type=str, default="cityscapes", help="dataset to train")
-    parser.add_argument("--arch", type=str, default="CascadeRelatioNet_res50", help="network architecture")
+    parser.add_argument("--arch", type=str, default="", help="network architecture")
     parser.add_argument("--ignore_label", type=int, default=255,
                         help="The index of the label to ignore during the training.")
     parser.add_argument("--input_size", type=int, default=832 ,
@@ -153,19 +153,16 @@ def main():
 
     # set models
     import libs.models as models
-    deeplab = models.__dict__[args.arch](num_classes=args.num_classes, data_set=args.data_set)
+    deeplab = models.__dict__[args.arch](num_classes=args.num_classes)
     if args.restore_from is not None:
-        saved_state_dict = torch.load(args.restore_from,map_location=torch.device('cpu'))
+        saved_state_dict = torch.load(args.restore_from, map_location=torch.device('cpu'))
         new_params = deeplab.state_dict().copy()
         for i in saved_state_dict:
             i_parts = i.split('.')
             if not i_parts[0] == 'fc':
                 new_params['.'.join(i_parts[0:])] = saved_state_dict[i]
         Log.info("load pretrined models")
-        if deeplab.backbone is not None:
-            deeplab.backbone.load_state_dict(new_params, strict=False)
-        else:
-            deeplab.load_state_dict(new_params, strict=False)
+        deeplab.load_state_dict(new_params, strict=False)
     else:
         Log.info("train from stracth")
 
@@ -192,7 +189,7 @@ def main():
         [{'params': filter(lambda p: p.requires_grad, deeplab.parameters()), 'lr': args.learning_rate}],
         lr=args.learning_rate, momentum=args.momentum, weight_decay=args.weight_decay)
     optimizer.zero_grad()
-
+    deeplab.cuda()
     # models transformation
     model = DistributedDataParallel(deeplab)
     model = apex.parallel.convert_syncbn_model(model)
