@@ -31,12 +31,12 @@ Please see the train_distribute.py for the details.
 ```bash
 sh ./exp/train_dual_seg_r50_city_finetrain.sh
 ```
-You will get the model with 79.8 mIoU.
+You will get the model with 79.6~79.8 mIoU.
 
 ```bash
 sh ./exp/train_dual_seg_r101_city_finetrain.sh
 ```
-You will get the model with 80.4 mIoU.
+You will get the model with 80.3~80.4 mIoU.
 
 ## Validation
 
@@ -93,8 +93,8 @@ Both are (**Single Model Result**)
 
 
 # Citation 
-Please read our paper for model details. 
-If you find the codebase usefull, please consider cite our paper.
+Please refer our paper for more detail. 
+If you find the codebase useful, please consider citing our paper.
 ```
 @inproceedings{xiangtl_gald
 title={Global Aggregation then Local Distribution in Fully Convolutional Networks},
