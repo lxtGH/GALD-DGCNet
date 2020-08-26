@@ -232,18 +232,17 @@ class GALDNet(nn.Module):
     def __init__(self, block, layers, num_classes, avg=False):
         self.inplanes = 128
         super(GALDNet, self).__init__()
-        self.conv1 = conv3x3(3, 64, stride=2)
-        self.bn1 = BatchNorm2d(64)
-        self.relu1 = nn.ReLU(inplace=False)
-        self.conv2 = conv3x3(64, 64)
-        self.bn2 = BatchNorm2d(64)
-        self.relu2 = nn.ReLU(inplace=False)
-        self.conv3 = conv3x3(64, 128)
-        self.bn3 = BatchNorm2d(128)
-        self.relu3 = nn.ReLU(inplace=False)
-
+        self.conv1 = nn.Sequential(
+            conv3x3(3, 64, stride=2),
+            BatchNorm2d(64),
+            nn.ReLU(inplace=True),
+            conv3x3(64, 64),
+            BatchNorm2d(64),
+            nn.ReLU(inplace=True),
+            conv3x3(64, 128))
+        self.bn1 = BatchNorm2d(self.inplanes)
         self.relu = nn.ReLU(inplace=False)
-        self.maxpool = nn.MaxPool2d(kernel_size=3, stride=2, padding=1, ceil_mode=True) # change
+        self.maxpool = nn.MaxPool2d(kernel_size=3, stride=2, padding=1, ceil_mode=True)
         self.layer1 = self._make_layer(block, 64, layers[0])
         self.layer2 = self._make_layer(block, 128, layers[1], stride=2)
         self.layer3 = self._make_layer(block, 256, layers[2], stride=1, dilation=2)
@@ -277,9 +276,9 @@ class GALDNet(nn.Module):
 
     def forward(self, x):
         size = x.size()[2:]
-        x = self.relu1(self.bn1(self.conv1(x)))
-        x = self.relu2(self.bn2(self.conv2(x)))
-        x = self.relu3(self.bn3(self.conv3(x)))
+        x = self.conv1(x)
+        x = self.bn1(x)
+        x = self.relu(x)
         x = self.maxpool(x)
         x = self.layer1(x)
         x = self.layer2(x)
