@@ -1,6 +1,10 @@
+
 # GALD-Net & Dual-Seg Net （BMVC-2019）
 This is pytorch re-implementation of GALD-net and Dual-Seg
 Both paper are accepted by BMVC-2019 which achieves state-of-the-art results on Cityscapes and Pascal Context datasets.
+
+# High Performance Road Scene Semantic Segmentaion :tada:
+
 
 There is also a co-current repo for Fast Road Scene Semantic Segmentation:[Fast_Seg :zap: ](https://github.com/lxtGH/Fast_Seg) and thanks for your attention :smiley:
 
