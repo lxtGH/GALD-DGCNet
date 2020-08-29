@@ -1,7 +1,7 @@
 
 # GALD-Net & Dual-Seg Net （BMVC-2019）
-This is pytorch re-implementation of GALD-net and Dual-Seg
-Both paper are accepted by BMVC-2019 which achieves state-of-the-art results on Cityscapes and Pascal Context datasets.
+This is PyTorch re-implementation of GALD-net and Dual-Seg.
+Both papers were accepted by BMVC-2019 and achieve state-of-the-art results on the Cityscapes and Pascal Context datasets.
 
 # High Performance Road Scene Semantic Segmentaion :tada:
 
@@ -17,7 +17,7 @@ There is also a co-current repo for Fast Road Scene Semantic Segmentation:[Fast_
 
 # Training & Validation
 
-## Requirement
+## Requirements
 
 pytorch >= 1.1.0
 apex
@@ -26,7 +26,7 @@ opencv-python
 ## Training 
 Note that we use apex to speed up training process. 
 At least 8 gpus with 12GB are needed since we need batch size at least 8 and crop size at least 800 on Cityscapes dataset.
-Please see the train_distribute.py for the details. 
+Please see [`train_distribute.py`](train_distribute.py) for the details. 
 
 ```bash
 sh ./exp/train_dual_seg_r50_city_finetrain.sh
@@ -45,13 +45,12 @@ sh ./exp/tes_dualseg_r50_city_finetrain.sh
 ```
 
 # Trained Model
-model with fine dataset. 
+Model trained with the Cityscapes fine dataset: 
 
-Dual-Seg-net: r50/r101 link: (https://drive.google.com/file/d/13HnKtJLyCVK7-e0OtQeLrsJub4IO2t0R/view?usp=sharing, https://drive.google.com/file/d/1xgePAXsXGummOfTo3XFPKUoe5-1QZcIy/view?usp=sharing)
+Dual-Seg-net: [ResNet 50](https://drive.google.com/file/d/13HnKtJLyCVK7-e0OtQeLrsJub4IO2t0R/view?usp=sharing), [ResNet 101](https://drive.google.com/file/d/1xgePAXsXGummOfTo3XFPKUoe5-1QZcIy/view?usp=sharing)
 
-
-# Some Advices on Training
-Please see the Common.md for the details for using the coarse data training. 
+# Some Advice on Training
+Please see the [Common.md](Common.md) for the details for using the coarse data training. 
 Or you can refer to our GLAD paper(last part) for reference.
 
 
@@ -59,7 +58,7 @@ Or you can refer to our GLAD paper(last part) for reference.
 We propose Global Aggregation then Local Distribution (GALD) scheme to distribute global information to each position adaptively according to the local information around the position. GALD net achieves **top performance** on Cityscapes dataset. Both source code and models will be available soon. The work was done at [DeepMotion AI Research](https://deepmotion.ai/) 
 
 ## DGCNet (BMVC 2019,[arxiv](https://arxiv.org/abs/1909.06121)) 
-We propose Dual Graph Convolutional Network (DGCNet) models the global context of the input feature by modelling two orthogonal graphs in a single framework. (Joint work: University of Oxford, Peking University and DeepMotion AI Research)
+We propose Dual Graph Convolutional Network (DGCNet) to model the global context of the input feature by modelling two orthogonal graphs in a single framework. (Joint work: University of Oxford, Peking University and DeepMotion AI Research)
 
 
 
