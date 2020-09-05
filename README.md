@@ -23,6 +23,9 @@ pytorch >= 1.1.0
 apex
 opencv-python
 
+## Pretrained Model
+Baidu Pan Link: https://pan.baidu.com/s/1MWzpkI3PwtnEl1LSOyLrLw  passwd: 4lwf
+
 ## Training 
 Note that we use apex to speed up training process. 
 At least 8 gpus with 12GB are needed since we need batch size at least 8 and crop size at least 800 on Cityscapes dataset.
