@@ -71,7 +71,7 @@ class SpatialCGNL(nn.Module):
         b, c, h, w = t.size()
 
         if self.groups and self.groups > 1:
-            _c = int(c / self.groups)
+            _c = c // self.groups
 
             ts = torch.split(t, split_size_or_sections=_c, dim=1)
             ps = torch.split(p, split_size_or_sections=_c, dim=1)
@@ -114,7 +114,7 @@ class GALDBlock(nn.Module):
         x = self.down(x)
         x = self.long_relation(x)
         # local attention
-        x = F.upsample(x,size=size, mode="bilinear", align_corners=True)
+        x = F.interpolate(x,size=size, mode="bilinear", align_corners=True)
         res = x
         x = self.local_attention(x)
         return x + res
@@ -147,7 +147,7 @@ class LocalAttenModule(nn.Module):
         x = self.dconv1(x)
         x = self.dconv2(x)
         x = self.dconv3(x)
-        x = F.upsample(x, size=(h, w), mode="bilinear", align_corners=True)
+        x = F.interpolate(x, size=(h, w), mode="bilinear", align_corners=True)
         x_mask = self.sigmoid_spatial(x)
 
         res1 = res1 * x_mask
