@@ -283,10 +283,14 @@ class GALDNet(nn.Module):
         x = self.layer1(x)
         x = self.layer2(x)
         x = self.layer3(x)
-        x_dsn = self.dsn(x)
+        if self.training:
+            x_dsn = self.dsn(x)
         x = self.layer4(x)
         x = self.head(x)
-        return [x, x_dsn]
+        if self.training:
+            return [x, x_dsn]
+        else:
+            return [x]
 
 
 def GALD_res101(num_classes=21):
