@@ -25,6 +25,7 @@ opencv-python
 
 ## Pretrained Model
 Baidu Pan Link: https://pan.baidu.com/s/1MWzpkI3PwtnEl1LSOyLrLw  passwd: 4lwf
+Google Drive Link: https://drive.google.com/file/d/1JlERBWT8fHvf-uD36k5-LRZ5taqUbraj/view?usp=sharing, https://drive.google.com/file/d/1gGzz_6ZHUSC4A3SO0yg8-uLE0iiPdO4H/view?usp=sharing
 
 ## Training 
 Note that we use apex to speed up training process. 
