@@ -1,3 +1,7 @@
+# GALD-Net-v2 (TIP-2021)
+
+Note that our GALD-v2 (improved version of GALD-v1) has been accept by TIP-2021! It achieves 83.5 mIoU using ResNet101 backbone!.
+
 
 # GALD-Net & Dual-Seg Net （BMVC-2019）
 This is PyTorch re-implementation of GALD-net and Dual-Seg.
