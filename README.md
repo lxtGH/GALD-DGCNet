@@ -89,6 +89,7 @@ GALD-Net | BMVC2019 | ResNet50 |**80.8**
 GALD-Net | BMVC2019| ResNet101 |**81.8**
 DGCN-Net | BMVC2019 | ResNet101 | **82.0**
 GALD-Net(use coarse data) |BMVC2019 | ResNet101 |**82.9**
+GALD-NetV2(use coarse data) |TIP2021 | ResNet101 |**83.5**
 GALD-Net(use Mapillary)|BMVC2019 |ResNet101| **83.3**
 
 
