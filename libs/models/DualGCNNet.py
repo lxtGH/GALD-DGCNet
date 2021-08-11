@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 # Author: Xiangtai(lxt@pku.edu.cn)
 # Pytorch implementation of Dual-GCN net
-import torch
+import mindspore
 import torch.nn.functional as F
 import torch.nn as nn
 from libs.models.GALDNet import Bottleneck, conv3x3
